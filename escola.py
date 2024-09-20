@@ -26,7 +26,7 @@ atividades = [
 for nome_atividade, atividade in atividades:
     
     print(f"Alunos da atividade {nome_atividade}\n")
-    print("-" * 50)
+    print("-" * 40)
     atividade_sala1 = []
     atividade_sala2 = []
 
@@ -36,7 +36,7 @@ for nome_atividade, atividade in atividades:
         elif aluno in sala2:
             atividade_sala2.append(aluno)
 
-    print()
     print(f"{nome_atividade} sala 1 ", atividade_sala1)
     print(f"{nome_atividade} sala 2 ", atividade_sala2)
-    print("#" * 50)
+    print()
+    print("#" * 40)
