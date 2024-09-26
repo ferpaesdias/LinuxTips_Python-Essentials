@@ -1,21 +1,26 @@
 #!/usr/bin/env python3
 import os
 import logging
+from logging import handlers
 
 log_level = os.getenv("LOG_LEVEL", "WARNING").upper()
-# nossa instância
 log = logging.Logger("logs.py", log_level)
-# level
-ch = logging.StreamHandler() # Console/Terminal
-ch.setLevel(log_level)
-# formatação
+# ch = logging.StreamHandler() # Console/Terminal
+# ch.setLevel(log_level)
+fh = handlers.RotatingFileHandler(
+    "Meulog.log", 
+    maxBytes=100, # 10**6
+    backupCount=10 
+)
+fh.setLevel(log_level)
 fmt = logging.Formatter(
     '%(asctime)s %(name)s %(levelname)s '
     'l:%(lineno)d f:%(filename)s %(message)s'
 )
-ch.setFormatter(fmt)
-#  destino
-log.addHandler(ch)
+#ch.setFormatter(fmt)
+fh.setFormatter(fmt)
+log.addHandler(fh
+)
 
 """
 log.debug("Mensage para o dev, qe, sysadmin")
