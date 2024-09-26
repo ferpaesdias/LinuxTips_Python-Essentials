@@ -10,6 +10,7 @@ try:
 except FileNotFoundError as e: 
     print(f"{str(e)}.")
     sys.exit(1)
+    #TODO: Usar retry
 
 # EAFP - Easy to Ask Forgiveness than permission
 
