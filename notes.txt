@@ -1,0 +1,3 @@
+Minha Nota	geral	Esta é uma nota geral
+Minha segunda Nota	geral	Python é muito bom
+Minha terceira Nota	tech	Terceira nota
