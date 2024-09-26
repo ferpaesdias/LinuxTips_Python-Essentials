@@ -3,18 +3,18 @@
 import os
 import sys
 
-# LBYL - Look Before You Leap
+# EAFP - Easy to Ask Forgiveness than permission
 
-if os.path.exists("name.txt"):
+try:
     names = open("names.txt").readlines()
-else:
-    print("[Error] File names.txt not found.")
+except FileNotFoundError as e: 
+    print(f"{str(e)}.")
     sys.exit(1)
 
-# LBYL - Look Before You Leap
+# EAFP - Easy to Ask Forgiveness than permission
 
-if len(names) >= 3:
-    print(names[2])
-else:
-    print("[Error] Missing name in the list")    
+try:
+    print(names[5])
+except IndexError as e:
+    print(f"{str(e)}.")
     sys.exit(1)
