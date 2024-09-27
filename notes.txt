@@ -1,3 +1,6 @@
 Minha Nota	geral	Esta é uma nota geral
 Minha segunda Nota	geral	Python é muito bom
 Minha terceira Nota	tech	Terceira nota
+minha quarta nota	tech	Golang
+Repetiçfd	pythond	While e for
+Teste	teste	teste
